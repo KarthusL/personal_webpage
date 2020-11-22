@@ -926,10 +926,10 @@ label {
 .latest-project-content {
   display: -ms-grid;
   display: grid;
-  margin-top: 20vh;
+  margin-top: 1vh;
   grid-auto-columns: 1fr;
   grid-column-gap: 10vw;
-  grid-row-gap: 10vh;
+  grid-row-gap: 1vh;
   -ms-grid-columns: 2fr 1fr;
   grid-template-columns: 2fr 1fr;
   -ms-grid-rows: auto;
@@ -975,7 +975,7 @@ label {
 }
 
 .latest-project-title {
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
 }
 
 .latest-project-image {
