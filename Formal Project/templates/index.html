@@ -1,486 +1,760 @@
 <!DOCTYPE html>
 <html data-wf-page="5f8a90e126d0101a2a611aab" data-wf-site="5f8a90e02d72a4d930369024">
-<head>
-    <meta charset="utf-8">
-    <title>Minimalistic – Webflow HTML website template</title>
-    <meta content="Minimalistic is a modern landing page template with minimal and typography design with  smooth animations. Designed for authors, freelancers and small agencies who provides creative service."
-          name="description">
-    <meta content="Minimalistic – Webflow HTML website template" property="og:title">
-    <meta content="Minimalistic is a modern landing page template with minimal and typography design with  smooth animations. Designed for authors, freelancers and small agencies who provides creative service."
-          property="og:description">
-    <meta content="Minimalistic – Webflow HTML website template" property="twitter:title">
-    <meta content="Minimalistic is a modern landing page template with minimal and typography design with  smooth animations. Designed for authors, freelancers and small agencies who provides creative service."
-          property="twitter:description">
-    <meta property="og:type" content="website">
-    <meta content="summary_large_image" name="twitter:card">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="Webflow" name="generator">
-    <link href="static/css/normalize.css" rel="stylesheet" type="text/css">
-    <link href="static/css/webflow.css" rel="stylesheet" type="text/css">
-    <link href="static/css/yifus-stellar-project.webflow.css" rel="stylesheet" type="text/css">
-    <!--link href="static/css/personalized.css" rel="stylesheet" type="text/css"-->
-    <!--link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/personalized.css') }}"-->
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
-    <script type="text/javascript">WebFont.load({  google: {    families: ["Inter:regular,500,600,700,800,900"]  }});
+   <head>
+      <meta charset="utf-8">
+      <title>Minimalistic – Webflow HTML website template</title>
+      <meta content="Minimalistic is a modern landing page template with minimal and typography design with  smooth animations. Designed for authors, freelancers and small agencies who provides creative service."
+         name="description">
+      <meta content="Minimalistic – Webflow HTML website template" property="og:title">
+      <meta content="Minimalistic is a modern landing page template with minimal and typography design with  smooth animations. Designed for authors, freelancers and small agencies who provides creative service."
+         property="og:description">
+      <meta content="Minimalistic – Webflow HTML website template" property="twitter:title">
+      <meta content="Minimalistic is a modern landing page template with minimal and typography design with  smooth animations. Designed for authors, freelancers and small agencies who provides creative service."
+         property="twitter:description">
+      <meta content="website" property="og:type">
+      <meta content="summary_large_image" name="twitter:card">
+      <meta content="width=device-width, initial-scale=1" name="viewport">
+      <meta content="Webflow" name="generator">
+      <link href="static/css/normalize.css" rel="stylesheet" type="text/css">
+      <link href="static/css/webflow.css" rel="stylesheet" type="text/css">
+      <link href="static/css/yifus-stellar-project.webflow.css" rel="stylesheet" type="text/css">
+      <!--link href="static/css/personalized.css" rel="stylesheet" type="text/css"-->
+      <!--link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/personalized.css') }}"-->
+      <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+      <script type="text/javascript">WebFont.load({  google: {    families: ["Inter:regular,500,600,700,800,900"]  }});</script>
+      <!-- [if lt IE 9]>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
+                 type="text/javascript"></script><![endif] -->
+      <script type="text/javascript">
+         !function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+      <link href="static/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+      <link href="static/images/webclip.png" rel="apple-touch-icon">
+   </head>
+   <body>
+      <header class="section header" data-w-id="8ff7d7e4-318f-944c-0f3a-bd03e39f74d1">
+         <div class="header-first" id="w-node-bd03e39f74d2-2a611aab">
+            <h1>Yifu Liu</h1>
+            <h2 class="header-subheading" id="w-node-bd03e39f74d5-2a611aab" style="margin-left:0.6em">Veni Vidi Vici</h2>
+            <!--span class="text-span-dot">•</span> <span class="text-span-dot">•</span> Maker</h2-->
+         </div>
+         <div class="header-second w-inline-block" href="" id="w-node-bd03e39f74dd-2a611aab">
+            <a href="#Hello">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image"
+                     sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
+                     src="static/images/header_01.jpg"
+                     srcset="static/images/period.png 500w, images/header_01-p-800.jpeg 800w"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Hobbies">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image" src="static/images/header_02.jpg"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Nav">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image" src="static/images/header_03.jpg"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Nav">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image" src="static/images/header_04.jpg"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Nav">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image" src="static/images/header_05.jpg"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Nav">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image" src="static/images/header_06.jpg"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Nav">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image"
+                     sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
+                     src="static/images/header_07.jpg"
+                     srcset="static/images/header_07-p-800.jpeg 800w"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Nav">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image"
+                     sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
+                     src="static/images/header_08.jpg"
+                     srcset="static/images/header_08-p-800.jpeg 800w"
+                     width="480"></div>
+               </div>
+            </a>
+            <a href="#Nav">
+               <div class="animation-container circle" data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39">
+                  <div class="animation-item circle"><img alt="" class="animation-image"
+                     sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
+                     src="static/images/header_01.jpg"
+                     srcset="static/images/period.png 500w, images/header_01-p-800.jpeg 800w"
+                     width="480"></div>
+               </div>
+            </a>
+         </div>
+         <div class="header-third w-node-bd03e39f7502-2a611aab" id="Nav">
+            {% with messages = get_flashed_messages()%}
+            {% if messages %}
+            <p>⇃Sucessful, try something else?⇂</p>
+            {% endif %}
+            {% endwith %}
+            <nav class="navigation">
+               <div class="navigation-item">
+                  <div class="navigation-subtext">navigation</div>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">.</div>
+                  <a class="navigation-link" href="#Hello">This is Yifu</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">b</div>
+                  <a class="navigation-link" href="#Hobbies">Hobbies</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">c</div>
+                  <a class="navigation-link" href="#Clients">Education and Project</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">d</div>
+                  <a class="navigation-link" href="#Principles">Principles</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">e</div>
+                  <a class="navigation-link" href="#Tools">Tools</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">f</div>
+                  <a class="navigation-link" href="#Latest-Project">Latest Project</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">g</div>
+                  <a class="navigation-link" href="#Blog">Blog</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">.</div>
+                  <a class="navigation-link" href="#Author-Message">A Will</a>
+               </div>
+               <div class="navigation-item">
+                  <div class="navigation-subtext">h</div>
+                  <a class="navigation-link" href="#Contact-Me">Don't leave a message?</a>
+               </div>
+            </nav>
+         </div>
+      </header>
+      <section class="section hello" id="Hello">
+         <div class="container in-hello">
+            <div>
+               <h2><span class="heading-counter">a.</span> Hello!</h2>
+               <div class="hello-title">And some of my experience.</div>
+            </div>
+            <div>
+               <div>
+                  <h3 class="hello-subheading">I’m Yifu, a programmer graduated from UMASS Amherst. Worked in Japan for
+                     One year and seeking a graduate study.
+                  </h3>
+               </div>
+               <div>
+                  <img alt="" class="" src="static/images/Personal_photo.jpg" width="600">
+                  <h4>@Santa Monica, CA</h4>
+               </div>
+               <div>
+                  <img alt="" class="hello-image" src="static/images/Mt.Fuji.jpg" width="1000">
+                  <h4>Summit of Mount Fuji @Yamanashi</h4>
+               </div>
+               <div>
+                  <img alt="" class="hello-image" src="static/images/Yellow_Stone.jpg" width="1000">
+                  <h4>Be playful as one is young @Yellowstone National Park, WY</h4>
+               </div>
+               <div>
+                  <img alt="" class="hello-image" src="static/images/go_karting.jpg" width="1000">
+                  <h4>Second Place of a Go-Karting Race @Boston, MA </h4>
+               </div>
+               <div>
+                  <img alt="" class="hello-image" src="static/images/天王町.jpg" width="1000">
+                  <h4>First day of my work @Kanagawa </h4>
+               </div>
+               <div>
+                  <img alt="" class="hello-image" src="static/images/scuba_diving.png" width="1000">
+                  <h4>The last dive @Koh Tao, Thailand </h4>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section service" id="Hobbies">
+         <div class="container">
+            <h2><span class="heading-counter">b.</span> Hobbies</h2>
+            <div class="w-layout-grid service-items">
+               <div>
+                  <img alt="" src="static/images/svg-snowboarding.svg">
+                  <h4>Snowboard</h4>
+                  <p>First met with Snowboard was in Dec 2019. It's hurt when fall down to the ground, but the Effect of
+                     Adrenaline makes me not feeling the pain.
+                  </p>
+               </div>
+               <div>
+                  <img alt="" src="static/images/svg-skewer.svg">
+                  <h4>A Foodie</h4>
+                  <p>
+                     Not everyone could understand the world of a foodie. For food we eat, what we see is the color, what
+                     we smell is the fragrance, and what we eat is the happiness. A qualified foodie can not only enjoy
+                     high-end restaurants, but also walk the streets to find different food vendors. Enjoy food
+                     seriously, which is the greatest back to the food. From the eyes of foodies, Only foods can't be let
+                     down.
+                     <!--                     <br></br>吃货的世界，不是每个人都懂的。每一种食物，我们看到的是色，闻到的是香，吃到最里面的是幸福。一位合格的吃货，既能享受到高档的餐厅，也能走街窜巷的寻找不同的苍蝇馆子，认真享受每一道食物，就是对美食最大的馈赠。在吃货眼里，唯美食不可辜负。-->
+                  </p>
+               </div>
+               <div>
+                  <img alt="" src="static/images/svg-earth-globe.svg">
+                  <h4>Traveling</h4>
+                  <p>From the sign of Arctic Circle to the .</p>
+               </div>
+               <div>
+                  <img alt="" src="static/images/svg-ai.svg">
+                  <h4>Conducting to AI</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim.</p>
+               </div>
+               <div>
+                  <img alt="" src="static/images/svg-relationship.svg">
+                  <h4>Animation</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
+               </div>
+               <div>
+                  <img alt="" src="static/images/svg-scuba-diving.svg">
+                  <h4>Scuba Diving</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim.</p>
+               </div>
+            </div>
+            <div class="service-info">
+               <img alt="" src="static/images/info.svg">
+               <h4 class="no-margin">I&#x27;m always open for new hobbies with time going</h4>
+            </div>
+         </div>
+      </section>
+      <section class="section clients" id="Clients">
+         <div class="container in-clients">
+            <div class="clients-content">
+               <div class="clients-heading-wrap">
+                  <h2 class="clients-heading" id="a"><span class="heading-counter">c.</span> Achievements &#38;
+                     Projects
+                  </h2>
+               </div>
+               <div class="clients-quote">
+                  <p class="clients-quote-text">A cosmopolitan who has study and work experience in the U.S. and Japan
+                     after coming of age, also composed of some characteristics from the
+                     people of those two countries, such as divergent thinking, discretion, and punctuality. Graduated
+                     from UMASS Amherst majoring in Computer
+                     Science concentrating on AI, Machine Learning and Natural Language Processing, seeking a chance to
+                     enter a higher-level school and keep to focus
+                     on those fields. Perseverance asks me to keep forcing on a willpower-needed matter, such as learning
+                     a language. Adventurousness encourages
+                     me to explore every corner of this world and exchange ideas with people in different places. Hoping
+                     my next challenge involves applying my
+                     coding and communication skills to my study from the benefits of an innovative and exciting graduate
+                     school.
+                  </p>
+                  <div class="clients-about">
+                     <img alt="" class="image-circle" src="static/images/photo.jpg"
+                        width="48">
+                     <div>
+                        <h4 class="no-margin">Yifu Liu</h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div>
+               <div class="h3-margin">
+                  <div>
+                     <h3 class="hello-subheading">&#945;. Selected Achievements</h3>
+                     <h4 class="h4-indent">Hack UMASS<span style="float:right; font-size:12pt; color:red;">Amherst, Massachusetts, US</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left;">FACIAL RECOGNITION<span
+                        style="float:right;">Nov 3<sup>rd</sup>- 5<sup>th</sup> 2017</span>
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Utilized OpenCV (open source, mainly aimed at recognizing faces),
+                        for
+                        preventing
+                        from glimpse screen, if the camera detects the second face,
+                        the screen will give a signal, which shows someone probably is glimpsing or staring at the
+                        screen.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Collaborated with teammates, solving the problems of OpenCV and
+                        improving the
+                        efficiency of the program.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Increased the accuracy rate of recognition by modifying the
+                        details
+                        of
+                        code.
+                     </h5>
+                  </div>
+                  <div>
+                     <h4 class="h4-indent">Five College Japanese Speech Contest<span
+                        style="float:right; font-size:12pt; color:red;">Amherst, Massachusetts, US</span></h4>
+                     <h5 class="h5-indent" style="text-align:left;">ONE POSSIBILITY OF HUMAN EXTINCTION<span
+                        style="float:right;">Mar 24<sup>th</sup> 2018</span></h5>
+                     <h5 class="h5-indent h5-content">• Researched on Artificial Intelligence and Machine Learning,
+                        deduced a
+                        conclusion that humans may be extinct due to Artificial Intelligence.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Wrote and reviewed script with support from Japanese language
+                        faculty.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Made an improvised speech and talked about AI and predicted a
+                        possible relationship between human and AI in the future.
+                     </h5>
+                  </div>
+                  <div>
+                     <h4 class="h4-indent">Japanese Certificate N2<span style="float:right; font-size:12pt; color:red;">New York City, NY, US</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left; text-transform: uppercase;">Able to understand
+                        Japanese in daily situation<span style="float:right;">Dec 2<sup
+                           style="text-transform: lowercase">nd</sup> 2019</span>
+                     </h5>
+                     <h5 class="h5-indent h5-content">• One is able to read materials written clearly on a variety of
+                        topics,
+                        such as articles and commentaries in newspapers and magazines as well as simple critiques, and
+                        comprehend their contents.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• One is also able to read written materials on general topics and
+                        follow their narratives as well as understand the intent of the writers.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• One is able to comprehend orally presented materials such as
+                        coherent
+                        conversations and news reports, spoken at nearly natural speed in everyday situations as well as
+                        in
+                        a variety of settings, and is able to follow their ideas and comprehend their contents. One is
+                        also
+                        able to understand the relationships among the people involved and the essential points of the
+                        presented materials.
+                     </h5>
+                  </div>
+               </div>
+               <div class="h3-margin">
+                  <div>
+                     <h3 class="hello-subheading">&#960;. Projects in School and Work</h3>
+                     <h4 class="h4-indent">Clustering to Compress Images<span
+                        style="float:right; font-size:12pt; color:red;">University of Massachusetts Amherst, MA</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left;">PYTHON<span style="float:right;">April 2018</span>
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Implemented unsupervised learning algorithms, ”hierachical
+                        clustering” and ”k-means clustering,” that will learn patterns from unlabeled examples.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Revised parameters to get the better results, and analyzed
+                        results by plotting graphs.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Uploaded the reconstructed images on Kaggle, ranked in top of 15%
+                        of accuracy competition in the class.
+                     </h5>
+                  </div>
+                  <div>
+                     <h4 class="h4-indent">Time-based One-time Password Generator<span
+                        style="float:right; font-size:12pt; color:red;">University of Massachusetts Amherst, MA</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left;">JAVA<span
+                        style="float:right;">Febuary - March 2018</span></h5>
+                     <h5 class="h5-indent h5-content">• Researched the document of Secure Hash Function-2 (a set of
+                        cryptographic hash functions), implemented a program which can generate undecodable passwords
+                        based on given strings.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Revised the program so that it can generate different types of
+                        passwords that include or exclude numbers, symbols, upper or lower cases.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Re-designed the program so the password generator can regenerate
+                        new passwords based on a time interval while making the previous passwords invalid.
+                     </h5>
+                  </div>
+                  <div>
+                     <h4 class="h4-indent">Chiba Bank Account Opening System (千葉興銀口座開設システム)<span
+                        style="float:right; font-size:12pt; color:red;">BASE, INC.(ベース株式会社), Tokyo, Japan</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left;">FRONT-END: ANGULARJS, BOOTSTRAP, JQUERY, HTML, CSS.
+                        BACK-END: JAVA, MYSQL<span style="float:right;">April - June 2019</span>
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Utilized OCR(Optical Character Recognition) to transfer scanned
+                        customers’ personal documents(for bank account applications use) into the
+                        64-base data stream to the OCR server and received returned Json files.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Conveyed Json files(pending application information) and parsed
+                        Json files into database readable strings.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Implemented Employee Back-End Management System, which allows
+                        bank employees to read information of bank account applications from database.
+                     </h5>
+                  </div>
+                  <div>
+                     <h4 class="h4-indent">Tough Connected System (タフつながるシステム)<span
+                        style="float:right; font-size:12pt; color:red;">BASE, INC.(ベース株式会社), Tokyo, Japan</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left;">ORACLE-PL/SQL<span style="float:right;">June - September 2019</span>
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Analysed requirements of testing data and revised existing PL/SQL
+                        classes to generate data for Batch-file tests.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Implemented PL/SQL functions and procedures to generate and
+                        duplicate hundreds of millions of data from raw data to databases and tables for testing
+                        use.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Implemented Batch files to test the efficiency of program using
+                        the testing data that created by PL/SQL functions.
+                     </h5>
+                  </div>
+                  <div>
+                     <h4 class="h4-indent">Infrastructure transition (UGW のDSF 基盤移行)<span
+                        style="float:right; font-size:12pt; color:red;">BASE, INC.(ベース株式会社), Tokyo, Japan</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left;">JAVA, AMAZON WEB SERVICES, POSTGRESQL<span
+                        style="float:right;">September 2019 - January 2020</span></h5>
+                     <h5 class="h5-indent h5-content">• Retrieved Json files from AWS RDS and parsed them into strings,
+                        and allocated strings into database using Postgresql.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Implemented and ran unit tests to check the code coverage for
+                        both implementation and database classes until 100%.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Wrote E2E to tests the entire software product from beginning to
+                        end to ensure the application flow behaves as expected and prepared necessary
+                        data for the test, then simulate the product’s system dependencies and ensures all integrated
+                        pieces work together as expected.
+                     </h5>
+                  </div>
+                  <div>
+                     <h4 class="h4-indent" id="Translation">Bilingual Translation(JP to EN)<span
+                        style="float:right; font-size:12pt; color:red;">BASE, INC.(ベース株式会社), Tokyo, Japan</span>
+                     </h4>
+                     <h5 class="h5-indent" style="text-align:left;">Bilingual Translation(JP to EN)<span
+                        style="float:right;">January - March 2020</span></h5>
+                     <h5 class="h5-indent h5-content">• Collaborated with teammates and translated Excel and PowerPoint
+                        documents from Japanese to English page by page, and verified the accuracy
+                        with teammates.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Communicated works with teammates in both English and
+                        Japanese.
+                     </h5>
+                     <h5 class="h5-indent h5-content">• Studied some vocabulary that may have various translations under
+                        different contexts between English and Japanese.
+                     </h5>
+                  </div>
+               </div>
+                         <div class="w-layout-grid service-items"  style="grid-column-gap: 3vw">
+            <div>
+               <h4>Programming</h4>
+               <p>Python, Java, SQL, HTML, CSS, <br>Java Script, Spring Boot, Oracle-PL/SQL</p>
+            </div>
+            <div>
+               <h4>Language</h4>
+               <p>English (GRE: 332, V:162, Q:170, A:4.0) <br>Japanese (N2: 110, Dec, 2018) Chinese (Native fluency)</p>
+            </div>
+            <div>
+               <h4>Others</h4>
+               <p>Trilingual Written Translation(EN, JA, CH) <br>Public Speaking, LaTeX, Kaggle</p>
+            </div>
+         </div>
+            </div>
 
+         </div>
 
-
-
-
-    </script>
-    <!-- [if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"
-            type="text/javascript"></script><![endif] -->
-    <script type="text/javascript">
-        !function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);
-
-
-
-
-
-
-    </script>
-    <link href="static/images/favicon.png" rel="shortcut icon" type="image/x-icon">
-    <link href="static/images/webclip.png" rel="apple-touch-icon">
-</head>
-<body>
-<header data-w-id="8ff7d7e4-318f-944c-0f3a-bd03e39f74d1" class="section header">
-    <div id="w-node-bd03e39f74d2-2a611aab" class="header-first">
-        <h1>Yifu Liu</h1>
-        <h2 id="w-node-bd03e39f74d5-2a611aab" class="header-subheading" style="margin-left:0.6em">Veni Vidi Vici</h2>
-        <!--span class="text-span-dot">•</span> <span class="text-span-dot">•</span> Maker</h2-->
-    </div>
-    <div href="" id="w-node-bd03e39f74dd-2a611aab" class="header-second w-inline-block">
-        <a href="#Hello">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_01.jpg" alt=""
-                                                        sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
-                                                        srcset="static/images/period.png 500w, images/header_01-p-800.jpeg 800w"
-                                                        class="animation-image"></div>
+      </section>
+      <section class="section principles" id="Principles">
+         <div class="container">
+            <h2><span class="heading-counter">d.</span> Principles</h2>
+            <div class="w-layout-grid principles-content">
+               <div class="principles-title-wrap">
+                  <div class="principles-title-counter">I.</div>
+                  <h3 class="principles-title">VENI VIDI VICI</h3>
+               </div>
+               <p class="principles-description">Never forget that every element you place on a page has a weight. The
+                  weight can come from color, size, or texture.
+               </p>
+               <div class="principles-title-wrap">
+                  <div class="principles-title-counter">II.</div>
+                  <h3 class="principles-title">Never Settle</h3>
+               </div>
+               <p class="principles-description">永不妥协
+               </p>
+               <div class="principles-title-wrap">
+                  <div class="principles-title-counter">III.</div>
+                  <h3 class="principles-title">Stay Hungry Stay Foolish</h3>
+               </div>
+               <p class="principles-description">Clean, minimal and effective. This is my main method. Clean code,
+                  fuss-free interfaces and expert execution, design as it should be.
+               </p>
             </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_02.jpg" alt=""
-                                                        class="animation-image"></div>
+         </div>
+      </section>
+      <section class="section" id="Tools">
+         <div class="container">
+            <div class="tools-header">
+               <h2><span class="heading-counter">e.</span> Equipments and Tools</h2>
+               <h4 class="no-margin">I&#x27;m using everyday.</h4>
             </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_03.jpg" alt=""
-                                                        class="animation-image"></div>
-            </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_04.jpg" alt=""
-                                                        class="animation-image"></div>
-            </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_05.jpg" alt=""
-                                                        class="animation-image"></div>
-            </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_06.jpg" alt=""
-                                                        class="animation-image"></div>
-            </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_07.jpg" alt=""
-                                                        sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
-                                                        srcset="static/images/header_07-p-800.jpeg 800w"
-                                                        class="animation-image"></div>
-            </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_08.jpg" alt=""
-                                                        sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
-                                                        srcset="static/images/header_08-p-800.jpeg 800w"
-                                                        class="animation-image"></div>
-            </div>
-        </a>
-        <a href="#Nav">
-            <div data-w-id="7be61132-309f-8eb1-a13a-41d6f805fc39" class="animation-container circle">
-                <div class="animation-item circle"><img width="480" src="static/images/header_01.jpg" alt=""
-                                                        sizes="(max-width: 479px) 25vw, (max-width: 767px) 11vw, (max-width: 991px) 12vw, 9vw"
-                                                        srcset="static/images/period.png 500w, images/header_01-p-800.jpeg 800w"
-                                                        class="animation-image"></div>
-            </div>
-        </a>
-    </div>
-    <div id="Nav" class="header-third w-node-bd03e39f7502-2a611aab">
-        {% with messages = get_flashed_messages()%}
-        {% if messages %}
-        <p>⇃Sucessful, try something else?⇂</p>
-        {% endif %}
-        {% endwith %}
-        <nav class="navigation">
-            <div class="navigation-item">
-                <div class="navigation-subtext">navigation</div>
-            </div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">.</div>
-                <a href="#Hello" class="navigation-link">This is Yifu</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">b</div>
-                <a href="#Service" class="navigation-link">Service</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">c</div>
-                <a href="#Clients" class="navigation-link">Clients</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">d</div>
-                <a href="#Principles" class="navigation-link">Principles</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">e</div>
-                <a href="#Tools" class="navigation-link">Tools</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">f</div>
-                <a href="#Latest-Project" class="navigation-link">Latest Project</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">g</div>
-                <a href="#Blog" class="navigation-link">Blog</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">.</div>
-                <a href="#Author-Message" class="navigation-link">A Will</a></div>
-            <div class="navigation-item">
-                <div class="navigation-subtext">h</div>
-                <a href="#Contact-Me" class="navigation-link">Don't leave a message?</a></div>
-        </nav>
-    </div>
-</header>
-<section id="Hello" class="section hello">
-    <div class="container in-hello">
-        <div>
-            <h2><span class="heading-counter">a.</span> Hello!</h2>
-            <div class="hello-title">I design interfaces and take photos.</div>
-        </div>
-        <div>
-            <h3 class="hello-subheading">I’m Peter, a Designer and Creative Director working on digital products based
-                in San Francisco, California.</h3><img src="static/images/project_09.jpg" width="480"
-                                                       sizes="(max-width: 479px) 100vw, 38vw"
-                                                       srcset="static/images/project_09-p-500.jpeg 500w, images/project_09-p-800.jpeg 800w, images/project_09.jpg 960w"
-                                                       alt="" class="hello-image"><img src="static/images/hello01.png"
-                                                                                       width="480"
-                                                                                       sizes="(max-width: 479px) 100vw, 38vw"
-                                                                                       srcset="static/images/hello01-p-500.png 500w, images/hello01.png 960w"
-                                                                                       alt="" class="hello-image"><img
-                src="static/images/project_03.jpg" width="480" alt="" class="hello-image"><img
-                src="static/images/hello04.png" width="480" alt="" class="hello-image"><img
-                src="static/images/project_04.jpg" width="480" sizes="(max-width: 479px) 100vw, 38vw"
-                srcset="static/images/project_04-p-500.jpeg 500w, images/project_04-p-800.jpeg 800w, images/project_04.jpg 960w"
-                alt="" class="hello-image"></div>
-    </div>
-</section>
-<section id="Service" class="section service">
-    <div class="container">
-        <h2><span class="heading-counter">b.</span> Service</h2>
-        <div class="w-layout-grid service-items">
-            <div><img src="static/images/web.svg" alt="">
-                <h4>Web Apps</h4>
-                <p>This is where problem solving meets visual impact. Uniting products and users.</p>
-            </div>
-            <div><img src="static/images/corporate.svg" alt="">
-                <h4>Corporate Sites</h4>
-                <p>Uniting products and users, design and experiences. This is where problem solving.</p>
-            </div>
-            <div><img src="static/images/mobile.svg" alt="">
-                <h4>Mobile App Design</h4>
-                <p>Using iOS, Android and an expert vision, I’ll take your app to the next level.</p>
-            </div>
-            <div><img src="static/images/frontend.svg" alt="">
-                <h4>Front End Development</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim.</p>
-            </div>
-            <div><img src="static/images/graphic.svg" alt="">
-                <h4>Graphic Design</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.</p>
-            </div>
-            <div><img src="static/images/animation.svg" alt="">
-                <h4>Animation</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim.</p>
-            </div>
-        </div>
-        <div class="service-info"><img src="static/images/info.svg" alt="">
-            <h4 class="no-margin">I&#x27;m always open for new offers</h4>
-        </div>
-    </div>
-</section>
-<section id="Clients" class="section clients">
-    <div class="container in-clients">
-        <div class="clients-content">
-            <div class="clients-heading-wrap">
-                <h2 class="clients-heading"><span class="heading-counter">c.</span> Clients</h2>
-            </div>
-            <div class="clients-quote">
-                <p class="clients-quote-text">«This is where problem solving meets visual impact. Uniting products and
-                    users, design and experiences. Design solving meets visual impact.»</p>
-                <div class="clients-about"><img src="static/images/person01_1person01.jpg" width="48" alt=""
-                                                class="image-circle">
-                    <div>
-                        <h4 class="no-margin">Robert Johnson</h4>
-                        <h5 class="no-margin">CEO Robotex </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="w-layout-grid clients-logos"><img src="static/images/client_logo_01.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_02.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_03.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_04.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_05.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_06.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_07.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_08.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_09.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_10.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_11.svg" alt="" class="client-logo"><img
-                src="static/images/client_logo_12.svg" alt="" class="client-logo"></div>
-    </div>
-</section>
-<section id="Principles" class="section principles">
-    <div class="container">
-        <h2><span class="heading-counter">d.</span> Principles</h2>
-        <div class="w-layout-grid principles-content">
-            <div class="principles-title-wrap">
-                <div class="principles-title-counter">I.</div>
-                <h3 class="principles-title">Balance and alignment.</h3>
-            </div>
-            <p class="principles-description">Never forget that every element you place on a page has a weight. The
-                weight can come from color, size, or texture.</p>
-            <div class="principles-title-wrap">
-                <div class="principles-title-counter">II.</div>
-                <h3 class="principles-title">Design is the sum of all things.</h3>
-            </div>
-            <p class="principles-description">There’s no style over substance here. I bring together form and the
-                function to create something that looks good and performs brilliantly. Simple.</p>
-            <div class="principles-title-wrap">
-                <div class="principles-title-counter">III.</div>
-                <h3 class="principles-title">Open ­– In thinking, in style.</h3>
-            </div>
-            <p class="principles-description">Clean, minimal and effective. This is my main method. Clean code,
-                fuss-free interfaces and expert execution, design as it should be.</p>
-        </div>
-    </div>
-</section>
-<section id="Tools" class="section">
-    <div class="container">
-        <div class="tools-header">
-            <h2><span class="heading-counter">e.</span> Tools</h2>
-            <h4 class="no-margin">I&#x27;m using everyday.</h4>
-        </div>
-        <div class="tools-columns">
-            <div class="tools-grid">
-                <div class="desktop-icon"><img src="static/images/mac_app-1.png" width="256" alt="">
-                    <div class="app-title">Todo Fox</div>
-                </div>
-                <div class="desktop-icon"><img src="static/images/mac_app-4.png" width="256" alt="">
-                    <div class="app-title">Live Notes</div>
-                </div>
-                <div class="tools-grid mini">
-                    <div data-w-id="36ea1e96-4dd8-7477-a91f-0b60e7ca8610" class="mobile-icon-wrap"><img
-                            src="static/images/11.png" width="256"
-                            sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
-                            srcset="static/images/11-p-500.png 500w, images/11.png 512w" alt="" class="mobile-icon">
+            <div class="tools-columns">
+               <div class="tools-grid">
+                  <div class="desktop-icon">
+                     <img alt="" src="static/images/mac_app-1.png" width="256">
+                     <div class="app-title">Todo Fox</div>
+                  </div>
+                  <div class="desktop-icon">
+                     <img alt="" src="static/images/mac_app-4.png" width="256">
+                     <div class="app-title">Live Notes</div>
+                  </div>
+                  <div class="tools-grid mini">
+                     <div class="mobile-icon-wrap" data-w-id="36ea1e96-4dd8-7477-a91f-0b60e7ca8610">
+                        <img
+                           alt="" class="mobile-icon"
+                           sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
+                           src="static/images/11.png" srcset="static/images/11-p-500.png 500w, images/11.png 512w"
+                           width="256">
                         <div class="app-title on-moblie">Spotify</div>
-                    </div>
-                    <div data-w-id="4fa3dfaf-ffdb-9ff0-18d4-ed86d8216a74" class="mobile-icon-wrap"><img
-                            src="static/images/5.png" width="256"
-                            sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
-                            srcset="static/images/5-p-500.png 500w, images/5.png 512w" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="4fa3dfaf-ffdb-9ff0-18d4-ed86d8216a74">
+                        <img
+                           alt="" class="mobile-icon"
+                           sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
+                           src="static/images/5.png" srcset="static/images/5-p-500.png 500w, images/5.png 512w"
+                           width="256">
                         <div class="app-title on-moblie">MailChimp</div>
-                    </div>
-                    <div data-w-id="6afc794d-cec9-227d-6af8-dcad43edf7b1" class="mobile-icon-wrap"><img
-                            src="static/images/10.png" width="256"
-                            sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
-                            srcset="static/images/10-p-500.png 500w, images/10.png 512w" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="6afc794d-cec9-227d-6af8-dcad43edf7b1">
+                        <img
+                           alt="" class="mobile-icon"
+                           sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
+                           src="static/images/10.png" srcset="static/images/10-p-500.png 500w, images/10.png 512w"
+                           width="256">
                         <div class="app-title on-moblie">SayHi</div>
-                    </div>
-                    <div data-w-id="5ab0457a-b898-d1af-c8a0-1d17f643537c" class="mobile-icon-wrap"><img
-                            src="static/images/12.png" width="256" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="5ab0457a-b898-d1af-c8a0-1d17f643537c">
+                        <img
+                           alt="" class="mobile-icon" src="static/images/12.png" width="256">
                         <div class="app-title on-moblie">Lemon</div>
-                    </div>
-                </div>
-                <div class="desktop-icon"><img src="static/images/mac_app-2.png" width="256" alt="">
-                    <div class="app-title">Swift</div>
-                </div>
-            </div>
-            <div class="tools-grid">
-                <div class="tools-grid mini">
-                    <div data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153b5" class="mobile-icon-wrap"><img
-                            src="static/images/16.png" width="256" alt="" class="mobile-icon">
+                     </div>
+                  </div>
+                  <div class="desktop-icon">
+                     <img alt="" src="static/images/mac_app-2.png" width="256">
+                     <div class="app-title">Swift</div>
+                  </div>
+               </div>
+               <div class="tools-grid">
+                  <div class="tools-grid mini">
+                     <div class="mobile-icon-wrap" data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153b5">
+                        <img
+                           alt="" class="mobile-icon" src="static/images/16.png" width="256">
                         <div class="app-title on-moblie">TweetBot</div>
-                    </div>
-                    <div data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153b9" class="mobile-icon-wrap"><img
-                            src="static/images/14.png" width="256" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153b9">
+                        <img
+                           alt="" class="mobile-icon" src="static/images/14.png" width="256">
                         <div class="app-title on-moblie">Comet</div>
-                    </div>
-                    <div data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153bd" class="mobile-icon-wrap"><img
-                            src="static/images/15.png" width="256" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153bd">
+                        <img
+                           alt="" class="mobile-icon" src="static/images/15.png" width="256">
                         <div class="app-title on-moblie">Telegram</div>
-                    </div>
-                    <div data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153c1" class="mobile-icon-wrap"><img
-                            src="static/images/4.jpg" width="256" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="71b14d4b-71f8-2a87-fe21-d1bc007153c1">
+                        <img
+                           alt="" class="mobile-icon" src="static/images/4.jpg" width="256">
                         <div class="app-title on-moblie">Monkey</div>
-                    </div>
-                </div>
-                <div class="desktop-icon"><img src="static/images/mac_app-3.png" width="256" alt="">
-                    <div class="app-title">Safari</div>
-                </div>
-                <div class="desktop-icon"><img src="static/images/mac_app-5.png" width="256" alt="">
-                    <div class="app-title">Vox</div>
-                </div>
-                <div class="tools-grid mini">
-                    <div data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dcd" class="mobile-icon-wrap"><img
-                            src="static/images/1.jpg" width="256" alt="" class="mobile-icon">
+                     </div>
+                  </div>
+                  <div class="desktop-icon">
+                     <img alt="" src="static/images/mac_app-3.png" width="256">
+                     <div class="app-title">Safari</div>
+                  </div>
+                  <div class="desktop-icon">
+                     <img alt="" src="static/images/mac_app-5.png" width="256">
+                     <div class="app-title">Vox</div>
+                  </div>
+                  <div class="tools-grid mini">
+                     <div class="mobile-icon-wrap" data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dcd">
+                        <img
+                           alt="" class="mobile-icon" src="static/images/1.jpg" width="256">
                         <div class="app-title on-moblie">Docs</div>
-                    </div>
-                    <div data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dd1" class="mobile-icon-wrap"><img
-                            src="static/images/2.jpg" width="256"
-                            sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
-                            srcset="static/images/2-p-500.jpeg 500w, images/2.jpg 512w" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dd1">
+                        <img
+                           alt="" class="mobile-icon"
+                           sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
+                           src="static/images/2.jpg" srcset="static/images/2-p-500.jpeg 500w, images/2.jpg 512w"
+                           width="256">
                         <div class="app-title on-moblie">Mountains</div>
-                    </div>
-                    <div data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dd5" class="mobile-icon-wrap"><img
-                            src="static/images/3.jpg" width="256" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dd5">
+                        <img
+                           alt="" class="mobile-icon" src="static/images/3.jpg" width="256">
                         <div class="app-title on-moblie">VHS</div>
-                    </div>
-                    <div data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dd9" class="mobile-icon-wrap"><img
-                            src="static/images/6.jpg" width="256"
-                            sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
-                            srcset="static/images/6-p-500.jpeg 500w, images/6.jpg 512w" alt="" class="mobile-icon">
+                     </div>
+                     <div class="mobile-icon-wrap" data-w-id="87ae49a5-d67f-c6ab-5731-6f8fc77c8dd9">
+                        <img
+                           alt="" class="mobile-icon"
+                           sizes="(max-width: 479px) 13vw, (max-width: 767px) 5vw, 6vw"
+                           src="static/images/6.jpg" srcset="static/images/6-p-500.jpeg 500w, images/6.jpg 512w"
+                           width="256">
                         <div class="app-title on-moblie">Calculator</div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</section>
-<section id="Latest-Project" class="section">
-    <div class="container in-latest-project">
-        <h2><span class="heading-counter">f.</span> Latest Project</h2>
-        <div class="latest-project-content">
-            <div class="latest-project-images"><img src="static/images/app01.jpg"
-                                                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 26vw, (max-width: 991px) 37vw, 49vw"
-                                                    srcset="static/images/app01-p-500.jpeg 500w, images/app01-p-800.jpeg 800w, images/app01.jpg 960w"
-                                                    alt="" class="latest-project-image">
-                <div class="latest-project-image-row"><img src="static/images/app02.jpg" alt=""
-                                                           class="latest-project-image"><img
-                        src="static/images/app04.jpg"
-                        sizes="(max-width: 479px) 62vw, (max-width: 767px) 11vw, (max-width: 991px) 17vw, 100vw"
-                        srcset="static/images/app04-p-500.jpeg 500w, images/app04-p-800.jpeg 800w, images/app04.jpg 960w"
-                        alt="" class="latest-project-image"></div>
-                <img src="static/images/app05.jpg"
+         </div>
+      </section>
+      <section class="section" id="Latest-Project">
+         <div class="container in-latest-project">
+            <h2><span class="heading-counter">f.</span> About My Recent</h2>
+            <div class="latest-project-content">
+               <div class="latest-project-images">
+                  <img alt=""
+                     class="latest-project-image"
                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 26vw, (max-width: 991px) 37vw, 49vw"
-                     srcset="static/images/app05-p-500.jpeg 500w, images/app05-p-800.jpeg 800w, images/app05.jpg 960w"
-                     alt="" class="latest-project-image"></div>
-            <div id="w-node-b3422ac88ba0-2a611aab" class="latest-project-info-wrap">
-                <div class="latest-project-info">
-                    <h3 class="latest-project-title"><strong>SummerVibes</strong> App</h3>
-                    <p class="latest-project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     src="static/images/app01.jpg"
+                     srcset="static/images/app01-p-500.jpeg 500w, images/app01-p-800.jpeg 800w, images/app01.jpg 960w">
+                  <div class="latest-project-image-row"><img alt="" class="latest-project-image"
+                     src="static/images/app02.jpg"><img
+                     alt=""
+                     class="latest-project-image"
+                     sizes="(max-width: 479px) 62vw, (max-width: 767px) 11vw, (max-width: 991px) 17vw, 100vw"
+                     src="static/images/app04.jpg"
+                     srcset="static/images/app04-p-500.jpeg 500w, images/app04-p-800.jpeg 800w, images/app04.jpg 960w">
+                  </div>
+                  <img alt=""
+                     class="latest-project-image"
+                     sizes="(max-width: 479px) 100vw, (max-width: 767px) 26vw, (max-width: 991px) 37vw, 49vw"
+                     src="static/images/app05.jpg"
+                     srcset="static/images/app05-p-500.jpeg 500w, images/app05-p-800.jpeg 800w, images/app05.jpg 960w">
+               </div>
+               <div class="latest-project-info-wrap" id="w-node-b3422ac88ba0-2a611aab">
+                  <div class="latest-project-info">
+                     <h3 class="latest-project-title"><strong>SummerVibes</strong> App</h3>
+                     <p class="latest-project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Suspendisse varius enim in eros elementum tristique.<br><br>Duis cursus, mi quis viverra ornare,
-                        eros dolor interdum nulla, ut commodo diam libero vitae erat.<br></p><a
-                        href="https://example.com/" class="button">Learn More</a></div>
+                        eros dolor interdum nulla, ut commodo diam libero vitae erat.<br>
+                     </p>
+                     <a
+                        class="button" href="https://example.com/">Learn More</a>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-</section>
-<section id="Blog" class="section blog">
-    <div class="container in-blog">
-        <div>
-            <h2 class="blog-heading"><span class="heading-counter">g.</span> Blog</h2>
-        </div>
-        <div class="w-dyn-list">
-            <div role="list" class="blog-posts w-dyn-items">
-                <div role="listitem" class="blog-posts-item w-dyn-item"><a href="#" class="w-inline-block"><img src=""
-                                                                                                                alt=""></a>
-                    <div class="blog-post-info">
+         </div>
+      </section>
+      <section class="section blog" id="Blog">
+         <div class="container in-blog">
+            <div>
+               <h2 class="blog-heading"><span class="heading-counter">g.</span> Blog</h2>
+            </div>
+            <div class="w-dyn-list">
+               <div class="blog-posts w-dyn-items" role="list">
+                  <div class="blog-posts-item w-dyn-item" role="listitem">
+                     <a class="w-inline-block" href="#"><img alt=""
+                        src=""></a>
+                     <div class="blog-post-info">
                         <div>
-                            <a href="#" class="blog-posts-link w-inline-block">
-                                <h4 class="blog-post-heading"></h4>
-                            </a>
-                            <h5 class="no-margin"></h5>
+                           <a class="blog-posts-link w-inline-block" href="#">
+                              <h4 class="blog-post-heading"></h4>
+                           </a>
+                           <h5 class="no-margin"></h5>
                         </div>
                         <p class="blog-post-summary"></p>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="w-dyn-empty">
+                  <div>No items found.</div>
+               </div>
             </div>
-            <div class="w-dyn-empty">
-                <div>No items found.</div>
+         </div>
+      </section>
+      <section class="section" id="Author-Message">
+         <div class="container">
+            <h2><span class="heading-counter">h.</span> Author Message</h2>
+            <div class="author-message-content">
+               <img alt=""
+                  class="image-circle" id="w-node-d3064a59a445-2a611aab"
+                  src="static/images/photo.jpg">
+               <div>
+                  <p class="author-message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pend and varius
+                     enim in eros elementum tristique.<br><br>Duis cursus, mi quis viverra ornare, eros dolor interdum
+                     nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+                     imperdiet. Nunc ut sem vitae risus tristique posuere.
+                  </p>
+                  <img alt=""
+                     class="author-signature"
+                     src="static/images/signature.svg">
+               </div>
             </div>
-        </div>
-    </div>
-</section>
-<section id="Author-Message" class="section">
-    <div class="container">
-        <h2><span class="heading-counter">h.</span> Author Message</h2>
-        <div class="author-message-content"><img src="static/images/person01_1person01.jpg"
-                                                 id="w-node-d3064a59a445-2a611aab" alt="" class="image-circle">
-            <div>
-                <p class="author-message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pend and varius
-                    enim in eros elementum tristique.<br><br>Duis cursus, mi quis viverra ornare, eros dolor interdum
-                    nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
-                    imperdiet. Nunc ut sem vitae risus tristique posuere.</p><img src="static/images/signature.svg"
-                                                                                  alt="" class="author-signature"></div>
-        </div>
-    </div>
-</section>
-<section id="Contact-Me" class="section">
-    <div class="container">
-        <div class="contact-header">
-            <h2><span class="heading-counter">i.</span> Contact Me</h2>
-            <h5 class="no-margin">Response Time: ?</h5>
-        </div>
-        <div class="contact-form-wrap w-form">
-            <form action="#" id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form"
-                  class="contact-form" method="POST">
-                <div><label for="name">Name</label><input type="text" class="text-field w-input" maxlength="256"
-                                                          name="name" data-name="Name"
-                                                          placeholder="leave it blank if you mind" id="name"/></div>
-                <div><label for="email">Email</label><input type="email" class="text-field w-input" maxlength="256"
-                                                            name="email" data-name="Email" placeholder="same as name"
-                                                            id="email"/></div>
-                <div id="w-node-153d466b5680-2a611aab"><label for="Message">Message</label><textarea name="msg"
-                                                                                                     maxlength="5000"
-                                                                                                     id="Message"
-                                                                                                     data-name="Message"
-                                                                                                     class="text-field textarea w-input"
-                                                                                                     placeholder="message can't be empty"
-                                                                                                     required=""></textarea>
-                </div>
-                <input type="submit" value="Send" data-wait="Please wait..." class="button w-button"/></form>
-        </div>
-        <div class="w-layout-grid contact-links">
-            <div>
-                <h3 class="contact-subheading">Email me</h3><a href="mailto:karthusliu@gmail.com?subject=Greetings"
-                                                               class="contact-link">karthusliu@gmail.com</a></div>
-            <div>
-                <h3 class="contact-subheading">Call me</h3><a href="tel:+86 15810751695" class="contact-link">+86
-                15810751695</a></div>
-            <div>
-                <h3 class="contact-subheading">Follow me</h3><a href="https://instagram.com" class="contact-link">@peter.parker</a>
+         </div>
+      </section>
+      <section class="section" id="Contact-Me">
+         <div class="container">
+            <div class="contact-header">
+               <h2><span class="heading-counter">i.</span> Contact Me</h2>
+               <h5 class="no-margin">Response Time: ?</h5>
             </div>
-        </div>
-    </div>
-</section>
-<footer class="footer">
-    <div class="footer-links"><a href="template-info/license.html" class="footer-link margin-right">License</a><a
-            href="template-info/style-guide.html" class="footer-link margin-right">Style Guide</a><a
-            href="template-info/style-guide.html" class="footer-link">Changelog</a></div>
-    <p>Powered by <a href="https://webflow.com/" target="_blank" class="footer-link">Webflow</a>. Created by <a
-            href="https://khimanin.com" class="footer-link">khimanin.com</a><br><a href="https://khimanin.com/"
-                                                                                   target="_blank"></a></p>
-</footer>
-<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f8a90e02d72a4d930369024"
-        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-        crossorigin="anonymous"></script>
-<script src="static/js/webflow.js" type="text/javascript"></script>
-<!-- [if lte IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-</body>
+            <div class="contact-form-wrap w-form">
+               <form action="#" class="contact-form" data-name="Contact Form" id="wf-form-Contact-Form"
+                  method="POST" name="wf-form-Contact-Form">
+                  <div><label for="name">Name</label><input class="text-field w-input" data-name="Name" id="name"
+                     maxlength="256" name="name"
+                     placeholder="leave it blank if you mind" type="text"/></div>
+                  <div><label for="email">Email</label><input class="text-field w-input" data-name="Email" id="email"
+                     maxlength="256" name="email" placeholder="same as name"
+                     type="email"/></div>
+                  <div id="w-node-153d466b5680-2a611aab"><label for="Message">Message</label><textarea
+                     class="text-field textarea w-input"
+                     data-name="Message"
+                     id="Message"
+                     maxlength="5000"
+                     name="msg"
+                     placeholder="message can't be empty"
+                     required=""></textarea>
+                  </div>
+                  <input class="button w-button" data-wait="Please wait..." type="submit" value="Send"/>
+               </form>
+            </div>
+            <div class="w-layout-grid contact-links">
+               <div>
+                  <h3 class="contact-subheading">Email me</h3>
+                  <a class="contact-link"
+                     href="mailto:karthusliu@gmail.com?subject=Greetings">karthusliu@gmail.com</a>
+               </div>
+               <div>
+                  <h3 class="contact-subheading">Call me</h3>
+                  <a class="contact-link" href="tel:+86 15810751695">+86
+                  15810751695</a>
+               </div>
+               <div>
+                  <h3 class="contact-subheading">Follow me</h3>
+                  <a class="contact-link" href="https://instagram.com">@peter.parker</a>
+               </div>
+            </div>
+         </div>
+      </section>
+      <footer class="footer">
+         <div class="footer-links"><a class="footer-link margin-right" href="template-info/license.html">License</a><a
+            class="footer-link margin-right" href="template-info/style-guide.html">Style Guide</a><a
+            class="footer-link" href="template-info/style-guide.html">Changelog</a></div>
+         <p>Powered by <a class="footer-link" href="https://webflow.com/" target="_blank">Webflow</a>. Created by <a
+            class="footer-link" href="https://khimanin.com">khimanin.com</a><br><a href="https://khimanin.com/"
+            target="_blank"></a></p>
+         <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+      </footer>
+      <script crossorigin="anonymous"
+         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+         src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f8a90e02d72a4d930369024"
+         type="text/javascript"></script>
+      <script src="static/js/webflow.js" type="text/javascript"></script>
+      <!-- [if lte IE 9]>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+   </body>
 </html>

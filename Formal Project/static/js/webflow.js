@@ -5,6 +5,34 @@
  *   var Webflow = Webflow || [];
  *   Webflow.push(readyFunction);
  */
+
+
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+    var a_top = document.getElementById('a').getBoundingClientRect().top;
+    var translation_top = document.getElementById('Translation').getBoundingClientRect().top;
+        if (translation_top < a_top) {
+            $('#a').html('<span class="heading-counter">c.</span>  Summary &#38; Skills');
+        } else {
+            $('#a').html('<span class="heading-counter">c.</span> Achievements &#38; Projects');
+        }
+    });
+});
+
+//window.onscroll = function (e) {
+////    console.log(window.scrollY); // Value of scroll Y in px
+//
+//    var top = offsets.top;
+//    var a_temp = a.top;
+//    console.log("translation" + top); // Value of scroll Y in px
+//    console.log("a" + a_temp); // Value of scroll Y in px
+//};
+
+
+
+
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

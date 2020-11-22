@@ -12,7 +12,6 @@ app.permanent_session_lifetime = timedelta(seconds=30)
 db = SQLAlchemy(app)
 
 
-
 # database model
 class Messages(db.Model):
     name = db.Column(db.String(100))
@@ -43,7 +42,7 @@ def process_message(name, email, msg):
 
 @app.route("/database", methods=["POST", "GET"])
 def message_database():
-    all_messages= Messages.query.filter_by().all()
+    all_messages = Messages.query.filter_by().all()
     return render_template("database.html", all_messages=all_messages)
 
 
