@@ -1,0 +1,5 @@
+{% block content %}
+{% for location in all_locations %}
+<p>city: {{location.city}}, ip_address: {{location.ip_address}}, time_stamp: {{location.time}}</p>
+{% endfor %}
+{% endblock %}
