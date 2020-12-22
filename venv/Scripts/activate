@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Yifu\Desktop\personal_webpage\Personal_webpage\venv"
+VIRTUAL_ENV="C:\Users\Yifu\Desktop\Personal_Webpage_AWS\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
