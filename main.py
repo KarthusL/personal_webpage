@@ -5,6 +5,7 @@ from datetime import timedelta
 from flask_simple_geoip import SimpleGeoIP
 from flask_sqlalchemy import SQLAlchemy
 import time
+import requests
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -15,6 +16,15 @@ db = SQLAlchemy(app)
 app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
 # Initialize the extension
 simple_geoip = SimpleGeoIP(app)
+
+
+@app.route("/", methods=["POST", "GET"])
+def home():
+    print("********")
+    if request.method == "POST":
+        process_message(request.form["name"], request.form["email"], request.form["msg"])
+    parse_geo_info()
+    return render_template("index.html")
 
 
 # database model
@@ -31,15 +41,6 @@ class Messages(db.Model):
         self.time = int(time.time())
 
 
-@app.route("/", methods=["POST", "GET"])
-def home():
-    print("********")
-    if request.method == "POST":
-        process_message(request.form["name"], request.form["email"], request.form["msg"])
-    parse_geo_info()
-    return render_template("index.html")
-
-
 def process_message(name, email, msg):
     msg = Messages(name, email, msg)
     db.session.add(msg)
@@ -52,13 +53,39 @@ def message_database():
     return render_template("database.html", all_messages=all_messages)
 
 
+# database model
+class Location(db.Model):
+    city = db.Column(db.String(100))
+    ip_address = db.Column(db.String(100))
+    time = db.Column('time', db.Float, primary_key=True)
+
+    def __init__(self, city, ip_address):
+        self.city = city
+        self.ip_address = ip_address
+        self.time = int(time.time())
+
+
 def parse_geo_info():
     geoip_data = simple_geoip.get_geoip_data()
-    print(geoip_data.get("location").get("city"))
     location_info = jsonify(data=geoip_data)
-    location_data = location_info.get_data()
+    info = json.loads(location_info.get_data())
+    city = info["data"]["location"]["city"]
+    ip_address = info["data"]["ip"]
+    print(city)
+    print(ip_address)
+    process_location(city, ip_address)
 
-    # print(location_info.json())
+
+def process_location(city, ip_address):
+    location = Location(city, ip_address)
+    db.session.add(location)
+    db.session.commit()
+
+
+@app.route("/location", methods=["POST", "GET"])
+def location_database():
+    all_locations = Location.query.filter(Location.city != "Hong Kong").all()
+    return render_template("location.html", all_locations=all_locations)
 
 
 if __name__ == "__main__":
