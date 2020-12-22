@@ -1,5 +1,6 @@
-from flask import Flask, redirect, url_for, render_template, request, session, flash
+from flask import Flask, redirect, url_for, render_template, request, session, flash, jsonify
 from datetime import timedelta
+from flask_simple_geoip import SimpleGeoIP
 from flask_sqlalchemy import SQLAlchemy
 import time
 
