@@ -17,6 +17,7 @@ app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
 # Initialize the extension
 simple_geoip = SimpleGeoIP(app)
 
+
 # database model
 class Messages(db.Model):
     name = db.Column(db.String(100))
@@ -61,4 +62,4 @@ def get_my_ip():
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(host="0.0.0.0", port=80, debug=True)
+    app.run(debug=True)
