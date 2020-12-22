@@ -1,11 +1,7 @@
-import json
-from flask_simple_geoip import SimpleGeoIP
-from flask import Flask, redirect, url_for, render_template, request, session, flash, jsonify
+from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 import time
-
-# from pip._vendor import requests
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -61,4 +57,4 @@ def parse_geo_info():
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=80, debug=True)
