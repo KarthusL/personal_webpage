@@ -37,6 +37,7 @@ def home():
     print("********")
     if request.method == "POST":
         process_message(request.form["name"], request.form["email"], request.form["msg"])
+    parse_geo_data()
     return render_template("index.html")
 
 
@@ -52,12 +53,10 @@ def message_database():
     return render_template("database.html", all_messages=all_messages)
 
 
-@app.route("/get_my_ip", methods=["GET"])
-def get_my_ip():
-    # print(jsonify({'ip': request.remote_addr}), 200)
+def parse_geo_data():
     geoip_data = simple_geoip.get_geoip_data()
-    return jsonify(data=geoip_data)
-    # return render_template("get_my_ip.html")
+    location_info = jsonify(data=geoip_data)
+    print(location_info)
 
 
 if __name__ == "__main__":
