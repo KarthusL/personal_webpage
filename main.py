@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, redirect, url_for, render_template, request, session, flash, jsonify
 from datetime import timedelta
 from flask_simple_geoip import SimpleGeoIP
@@ -52,8 +54,11 @@ def message_database():
 
 def parse_geo_info():
     geoip_data = simple_geoip.get_geoip_data()
+    print(geoip_data.get("location").get("city"))
     location_info = jsonify(data=geoip_data)
-    print(location_info.get_data())
+    location_data = location_info.get_data()
+
+    # print(location_info.json())
 
 
 if __name__ == "__main__":
