@@ -37,7 +37,7 @@ def home():
     print("********")
     if request.method == "POST":
         process_message(request.form["name"], request.form["email"], request.form["msg"])
-    parse_geo_data()
+    parse_geo_info()
     return render_template("index.html")
 
 
@@ -53,10 +53,10 @@ def message_database():
     return render_template("database.html", all_messages=all_messages)
 
 
-def parse_geo_data():
+def parse_geo_info():
     geoip_data = simple_geoip.get_geoip_data()
     location_info = jsonify(data=geoip_data)
-    print(location_info)
+    print(location_info.get_data())
 
 
 if __name__ == "__main__":
