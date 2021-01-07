@@ -1,11 +1,10 @@
 import json
-
+from twilio.rest import Client
 from flask import Flask, redirect, url_for, render_template, request, session, flash, jsonify
 from datetime import timedelta
 from flask_simple_geoip import SimpleGeoIP
 from flask_sqlalchemy import SQLAlchemy
 import time
-import requests
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -16,6 +15,9 @@ db = SQLAlchemy(app)
 app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
 # Initialize the extension
 simple_geoip = SimpleGeoIP(app)
+account_sid = "ACfa14eee3628aa0aaaccbef4f66466f35"
+auth_token = "082d316e544b61a4ca29bcc52e2d1c47"
+client = Client(account_sid, auth_token)
 
 
 @app.route("/", methods=["POST", "GET"])
@@ -69,10 +71,11 @@ def parse_geo_info():
     geoip_data = simple_geoip.get_geoip_data()
     location_info = jsonify(data=geoip_data)
     info = json.loads(location_info.get_data())
+    print(info)
     city = info["data"]["location"]["city"]
     ip_address = info["data"]["ip"]
-    print(city)
-    print(ip_address)
+    country = info["data"]["location"]["country"]
+    region = info["data"]["location"]["region"]
     process_location(city, ip_address)
 
 
@@ -80,6 +83,7 @@ def process_location(city, ip_address):
     location = Location(city, ip_address)
     db.session.add(location)
     db.session.commit()
+    send_text_message(city, ip_address)
 
 
 @app.route("/location", methods=["POST", "GET"])
@@ -88,6 +92,13 @@ def location_database():
     return render_template("location.html", all_locations=all_locations)
 
 
+def send_text_message(city, ip_address):
+    if city != "Hone Kong" and city is not None:
+        call = client.messages.create(body=city + ip_address, to="+8615810751695", from_="+19388883198")
+        print(call.sid)
+
+
 if __name__ == "__main__":
     db.create_all()
     app.run(host="0.0.0.0", port=80, debug=True)
+    # app.run(debug=True)
