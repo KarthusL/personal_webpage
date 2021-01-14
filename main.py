@@ -17,7 +17,7 @@ app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
 # Initialize the extension
 simple_geoip = SimpleGeoIP(app)
 account_sid = "ACfa14eee3628aa0aaaccbef4f66466f35"
-auth_token = "db72b3d86abe50ef1887c5e0fca4843b"
+auth_token = "d5d05b8b5937ad2889ca0754dfb6444b"
 client = Client(account_sid, auth_token)
 # abuseipdb.configure_api_key("aed2d305737f998e1e97d056a0e35399622bdd8078f98eca014be4089b1b636e686eb44ea1bd1133")
 url = 'https://api.abuseipdb.com/api/v2/check'
@@ -81,7 +81,8 @@ def parse_geo_info():
     region = info["data"]["location"]["region"]
     is_white_list, abuse_score = check_abuse_ip(ip_address)
     if is_white_list is True or abuse_score < 25:
-        process_location(city, ip_address)
+        send_text_message(city, ip_address)
+    process_location(city, ip_address)
 
 
 def check_abuse_ip(ip_address):
@@ -105,7 +106,6 @@ def process_location(city, ip_address):
     location = Location(city, ip_address)
     db.session.add(location)
     db.session.commit()
-    send_text_message(city, ip_address)
 
 
 @app.route("/location", methods=["POST", "GET"])
