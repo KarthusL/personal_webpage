@@ -1,5 +1,5 @@
 {% block content %}
-    {% for message in all_messages %}
-        <p>Name: {{message.name}}, Email: {{message.email}}, Name: {{message.msg}}, Email: {{message.time}}</p>
-    {% endfor %}
+{% for message in all_messages %}
+<p>Name: {{message.name}}, Email: {{message.email}}, Message: {{message.msg}}, Time_stamp: {{message.time}}</p>
+{% endfor %}
 {% endblock %}
