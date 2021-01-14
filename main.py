@@ -5,6 +5,7 @@ from datetime import timedelta
 from flask_simple_geoip import SimpleGeoIP
 from flask_sqlalchemy import SQLAlchemy
 import time
+import requests
 
 app = Flask(__name__)
 app.secret_key = "super secret key"
@@ -16,8 +17,10 @@ app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
 # Initialize the extension
 simple_geoip = SimpleGeoIP(app)
 account_sid = "ACfa14eee3628aa0aaaccbef4f66466f35"
-auth_token = "082d316e544b61a4ca29bcc52e2d1c47"
+auth_token = "db72b3d86abe50ef1887c5e0fca4843b"
 client = Client(account_sid, auth_token)
+# abuseipdb.configure_api_key("aed2d305737f998e1e97d056a0e35399622bdd8078f98eca014be4089b1b636e686eb44ea1bd1133")
+url = 'https://api.abuseipdb.com/api/v2/check'
 
 
 @app.route("/", methods=["POST", "GET"])
@@ -76,7 +79,26 @@ def parse_geo_info():
     ip_address = info["data"]["ip"]
     country = info["data"]["location"]["country"]
     region = info["data"]["location"]["region"]
-    process_location(city, ip_address)
+    is_white_list, abuse_score = check_abuse_ip(ip_address)
+    if is_white_list is True or abuse_score < 25:
+        process_location(city, ip_address)
+
+
+def check_abuse_ip(ip_address):
+    querystring = {
+        'ipAddress': ip_address,
+        'maxAgeInDays': '180'
+    }
+    headers = {
+        'Accept': 'application/json',
+        'Key': 'aed2d305737f998e1e97d056a0e35399622bdd8078f98eca014be4089b1b636e686eb44ea1bd1133'
+    }
+    response = requests.request(method='GET', url=url, headers=headers, params=querystring)
+    decodedResponse = json.loads(response.text)
+    is_white_list = decodedResponse["data"]["isWhitelisted"]
+    abuse_score = decodedResponse["data"]["abuseConfidenceScore"]
+    print(json.dumps(decodedResponse, sort_keys=True, indent=4))
+    return is_white_list, abuse_score
 
 
 def process_location(city, ip_address):
