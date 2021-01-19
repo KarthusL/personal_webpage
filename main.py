@@ -16,8 +16,10 @@ db = SQLAlchemy(app)
 app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
 # Initialize the extension
 simple_geoip = SimpleGeoIP(app)
-account_sid = "ACfa14eee3628aa0aaaccbef4f66466f35"
-auth_token = "d5d05b8b5937ad2889ca0754dfb6444b"
+with open('twillow_auth') as f:
+    twillow_auth = json.load(f)
+account_sid = twillow_auth["account_sid"]
+auth_token = twillow_auth["auth_token"]
 client = Client(account_sid, auth_token)
 # abuseipdb.configure_api_key("aed2d305737f998e1e97d056a0e35399622bdd8078f98eca014be4089b1b636e686eb44ea1bd1133")
 url = 'https://api.abuseipdb.com/api/v2/check'
@@ -80,8 +82,9 @@ def parse_geo_info():
     country = info["data"]["location"]["country"]
     region = info["data"]["location"]["region"]
     is_white_list, abuse_score = check_abuse_ip(ip_address)
-    if is_white_list is True or abuse_score < 25:
-        send_text_message(city, ip_address)
+    # if is_white_list is True or abuse_score < 25:
+    #     print("safe-----------------------")
+    #     send_text_message(city, ip_address)
     process_location(city, ip_address)
 
 
@@ -115,12 +118,12 @@ def location_database():
 
 
 def send_text_message(city, ip_address):
-    if city != "Hone Kong" and city is not None:
-        call = client.messages.create(body=city + ip_address, to="+8615810751695", from_="+19388883198")
-        print(call.sid)
+    call = client.messages.create(body=city + ip_address, to="+8615810751695", from_="+19388883198")
+    print("message sent")
+    print(call.sid)
 
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(host="0.0.0.0", port=80, debug=True)
-    # app.run(debug=True)
+    # app.run(host="0.0.0.0", port=80, debug=True)
+    app.run(debug=True)
