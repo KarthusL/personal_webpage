@@ -16,6 +16,7 @@ db = SQLAlchemy(app)
 app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
 # Initialize the extension
 simple_geoip = SimpleGeoIP(app)
+
 with open('twillow_auth') as f:
     twillow_auth = json.load(f)
 account_sid = twillow_auth["account_sid"]
@@ -83,7 +84,6 @@ def parse_geo_info():
     region = info["data"]["location"]["region"]
     is_white_list, abuse_score = check_abuse_ip(ip_address)
     # if is_white_list is True or abuse_score < 25:
-    #     print("safe-----------------------")
     #     send_text_message(city, ip_address)
     process_location(city, ip_address)
 
@@ -125,5 +125,5 @@ def send_text_message(city, ip_address):
 
 if __name__ == "__main__":
     db.create_all()
-    # app.run(host="0.0.0.0", port=80, debug=True)
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=80, debug=True)
+    # app.run(debug=True)
