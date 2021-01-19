@@ -7,22 +7,28 @@ from flask_sqlalchemy import SQLAlchemy
 import time
 import requests
 
+# basic app config
 app = Flask(__name__)
 app.secret_key = "super secret key"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.permanent_session_lifetime = timedelta(seconds=30)
+
+# database setup
 db = SQLAlchemy(app)
+
+# simple_geoip setup
 app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
-# Initialize the extension
 simple_geoip = SimpleGeoIP(app)
 
+# twillow setup
 with open('twillow_auth') as f:
     twillow_auth = json.load(f)
 account_sid = twillow_auth["account_sid"]
 auth_token = twillow_auth["auth_token"]
 client = Client(account_sid, auth_token)
-# abuseipdb.configure_api_key("aed2d305737f998e1e97d056a0e35399622bdd8078f98eca014be4089b1b636e686eb44ea1bd1133")
+
+# abuseipdb setup
 url = 'https://api.abuseipdb.com/api/v2/check'
 
 
