@@ -129,6 +129,12 @@ def send_text_message(city, ip_address):
     print(call.sid)
 
 
+@app.errorhandler(500)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return render_template('404.html'), 404
+
+
 if __name__ == "__main__":
     db.create_all()
     app.run(host="0.0.0.0", port=80, debug=True)
