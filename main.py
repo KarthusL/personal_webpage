@@ -18,7 +18,7 @@ app.permanent_session_lifetime = timedelta(seconds=30)
 db = SQLAlchemy(app)
 
 # simple_geoip setup
-app.config.update(GEOIPIFY_API_KEY='at_NyEEpM3A5sHPdCu2a7JYhjnemm2be')
+app.config.update(GEOIPIFY_API_KEY='at_vYWXCMrBCR2BQu7NsmpMYs73rrP7F')
 simple_geoip = SimpleGeoIP(app)
 
 # twillow setup
@@ -34,9 +34,9 @@ url = 'https://api.abuseipdb.com/api/v2/check'
 
 @app.route("/", methods=["POST", "GET"])
 def home():
-    print("********")
     if request.method == "POST":
         process_message(request.form["name"], request.form["email"], request.form["msg"])
+    print("---home---")
     parse_geo_info()
     return render_template("index.html")
 
@@ -89,9 +89,9 @@ def parse_geo_info():
     country = info["data"]["location"]["country"]
     region = info["data"]["location"]["region"]
     is_white_list, abuse_score = check_abuse_ip(ip_address)
-    # if is_white_list is True or abuse_score < 25:
-    #     send_text_message(city, ip_address)
-    process_location(city, ip_address)
+    if is_white_list is True or abuse_score < 25:
+        send_text_message(city, ip_address)
+        process_location(city, ip_address)
 
 
 def check_abuse_ip(ip_address):
