@@ -90,6 +90,16 @@ label {
   font-weight: 500;
 }
 
+#map {
+    width: 100px;
+  height: 100px;
+}
+
+#sectiontitle {
+  margin-bottom: 300px;
+}
+
+
 .header-second {
   display: -ms-grid;
   display: grid;

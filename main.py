@@ -37,7 +37,7 @@ def home():
     if request.method == "POST":
         process_message(request.form["name"], request.form["email"], request.form["msg"])
     print("---home---")
-    parse_geo_info()
+    # parse_geo_info()
     return render_template("index.html")
 
 
@@ -137,5 +137,5 @@ def page_not_found(e):
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(host="0.0.0.0", port=80, debug=True)
-    # app.run(debug=True)
+    # app.run(host="0.0.0.0", port=80, debug=True)
+    app.run(debug=True)

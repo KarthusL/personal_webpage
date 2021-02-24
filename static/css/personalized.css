@@ -1,0 +1,26 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 700px;
+  width: 700px;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.schedule{
+margin-right: 40px;
+}
+
+#sectiontitle {
+  margin-bottom: 300px;
+}

@@ -6,6 +6,26 @@
  *   Webflow.push(readyFunction);
  */
 
+//        function initMap() {
+//            var options = {
+//            zoom: 6,
+//            center: { lat: 51.541837, lng: -0.139199 },
+//            }
+//            var map = new google.maps.Map(document.getElementById("map"), options);
+//        }
+
+
+window.initMap = function(){
+      // The location of Uluru
+  const uluru = { lat: 44.402393, lng: 86.66999732 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 5.5,
+    center: uluru,
+  });
+}
+
+
 
 
 $(document).ready(function () {
@@ -19,18 +39,6 @@ $(document).ready(function () {
         }
     });
 });
-
-//window.onscroll = function (e) {
-////    console.log(window.scrollY); // Value of scroll Y in px
-//
-//    var top = offsets.top;
-//    var a_temp = a.top;
-//    console.log("translation" + top); // Value of scroll Y in px
-//    console.log("a" + a_temp); // Value of scroll Y in px
-//};
-
-
-
 
 
 /******/ (function(modules) { // webpackBootstrap
