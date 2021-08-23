@@ -1,5 +1,5 @@
 import json
-from twilio.rest import Client
+# from twilio.rest import Client
 from flask import Flask, redirect, url_for, render_template, request, session, flash, jsonify
 from datetime import timedelta
 from flask_simple_geoip import SimpleGeoIP
@@ -22,11 +22,11 @@ app.config.update(GEOIPIFY_API_KEY='at_vYWXCMrBCR2BQu7NsmpMYs73rrP7F')
 simple_geoip = SimpleGeoIP(app)
 
 # twillow setup
-with open('twillow_auth') as f:
-    twillow_auth = json.load(f)
-account_sid = twillow_auth["account_sid"]
-auth_token = twillow_auth["auth_token"]
-client = Client(account_sid, auth_token)
+# with open('twillow_auth') as f:
+#     twillow_auth = json.load(f)
+# account_sid = twillow_auth["account_sid"]
+# auth_token = twillow_auth["auth_token"]
+# client = Client(account_sid, auth_token)
 
 # abuseipdb setup
 url = 'https://api.abuseipdb.com/api/v2/check'
@@ -137,5 +137,6 @@ def page_not_found(e):
 
 if __name__ == "__main__":
     db.create_all()
-    # app.run(host="0.0.0.0", port=80, debug=True)
+    app.run(host="0.0.0.0", port=80, debug=True)
+    # app.run(host="127.0.0.1", debug=True)
     app.run(debug=True)
