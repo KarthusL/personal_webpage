@@ -28,7 +28,7 @@ def home():
     print("********")
     if request.method == "POST":
         process_message(request.form["name"], request.form["email"], request.form["msg"])
-    parse_geo_info()
+    # parse_geo_info()
     return render_template("index.html")
 
 
@@ -122,5 +122,8 @@ def send_text_message(city, ip_address):
 
 if __name__ == "__main__":
     db.create_all()
+    # Local Test
+    app.run(host="127.0.0.1", debug=True)
+    #AWS
     app.run(host="0.0.0.0", port=80, debug=True)
-    # app.run(debug=True)
+    app.run(debug=True)
