@@ -35,7 +35,7 @@ url = 'https://api.abuseipdb.com/api/v2/check'
 @app.route("/", methods=["POST", "GET"])
 def home():
     if request.method == "POST":
-        process_message(request.form["name"], request.form["email"], request.form["msg"])
+        process_message(request.form.get('name', ''), request.form.get('email', ''), request.form.get('msg', ''))
     print("---home---")
     # parse_geo_info()
     return render_template("index.html")
