@@ -13,12 +13,13 @@ app.secret_key = "super secret key"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.sqlite3'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.permanent_session_lifetime = timedelta(seconds=30)
-
+app.app_context().push()
 # database setup
 db = SQLAlchemy(app)
 
 # simple_geoip setup
 app.config.update(GEOIPIFY_API_KEY='at_vYWXCMrBCR2BQu7NsmpMYs73rrP7F')
+
 simple_geoip = SimpleGeoIP(app)
 
 # twillow setup
@@ -79,6 +80,10 @@ class Location(db.Model):
         self.time = int(time.time())
 
 
+with app.app_context():
+    db.create_all()
+
+
 def parse_geo_info():
     geoip_data = simple_geoip.get_geoip_data()
     location_info = jsonify(data=geoip_data)
@@ -135,8 +140,13 @@ def page_not_found(e):
     return render_template('404.html'), 404
 
 
+@app.route("/3dModel", methods=["POST", "GET"])
+def AR_model():
+    return render_template("3dModel.html")
+
+
 if __name__ == "__main__":
-    db.create_all()
-    app.run(host="0.0.0.0", port=80, debug=True)
+    # db.create_all()
+    app.run(host="0.0.0.0", port=8080)
     # app.run(host="127.0.0.1", debug=True)
-    app.run(debug=True)
+    # app.run(debug=True)
